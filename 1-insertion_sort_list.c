@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- * swap_func - Swap position of two nodes
- * @x: First node
- * @y: Second node
-
+ * swap - Swap position of two nodes
+ * @pre: First node
+ * @curr: Second node
+ *
  * Return: nothing
 */
 
@@ -28,7 +28,7 @@ void swap(listint_t *pre, listint_t *curr)
 /**
  * insertion_sort_list - Sort doubly linked list of int in ascending order
  * @list: list to be sorted
-
+ *
  * Return: nothing
 */
 
@@ -38,16 +38,16 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 	{
-        return;
-    }
-	
+		return;
+	}
+
 	curr = (*list)->next;
-	
+
 	while (curr != NULL)
 	{
 		temp = curr;
 
-		while(temp != NULL && temp->prev != NULL)
+		while (temp != NULL && temp->prev != NULL)
 		{
 			if (temp->prev->n > temp->n)
 			{
