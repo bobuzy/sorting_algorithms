@@ -2,7 +2,7 @@
 
 This repository contains solutions to various sorting algorithm tasks implemented in different programming languages.
 
-## Task 1: Bubble Sort
+## Task 0: Bubble Sort
 
 ### Objective:
 Implement a function that sorts an array of integers in ascending order using the Bubble sort algorithm. The function should print the array after each swap operation.
@@ -54,6 +54,31 @@ Here's how the code works:
 9. After each swap, it prints the updated list using the `print_list` function (assuming it's defined elsewhere).
 10. If no swap is made in an iteration of the inner loop, it moves `temp` to its previous node to continue the comparison.
 11. The outer loop continues until the end of the list is reached.
+
+## Task 2: Selection Sort
+
+### Objective:
+Write a function that sorts an array of integers in ascending order using the Selection sort algorithm. The function should print the array after each time you swap two elements.
+
+### File Details:
+- Task File: `2-selection_sort.c`
+- Big O Notations (Time Complexity) in `2-O`:
+  - Best Case: O(n^2)
+  - Average Case: O(n^2)
+  - Worst Case: O(n^2)
+
+### Solution Code (`2-selection_sort.c`):
+The `selection_sort` function takes an array of integers (`int *array`) and its size (`size_t size`) as input parameters. It sorts the array in ascending order using the Selection sort algorithm.
+
+Here's how the code works:
+1. It checks if the input array is valid and not empty.
+2. It uses two nested loops:
+   - The outer loop iterates from the first element of the array (`ind1 = 0`) to the second-to-last element (`size - 1`).
+   - The inner loop iterates from the element after the current outer loop index (`ind2 = ind1 + 1`) to the last element (`size`).
+3. Within the inner loop, it checks if the current element at index `ind1` is greater than the element at index `ind2`.
+4. If a smaller element is found, it updates the `min` index to the index of the smaller element and sets `min_flag` to 1.
+5. If `min_flag` is 1, it swaps the current element at index `ind1` with the minimum element found (`array[min]`) and prints the array.
+6. The outer loop continues until all elements are sorted.
 
 ## How to Run the Code:
 - Compile the C file using a C compiler (e.g., gcc).
