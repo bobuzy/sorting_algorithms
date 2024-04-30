@@ -9,7 +9,7 @@
  *
  * Return: Nothing
 */
-void swap(int *array, size_t size, int *x, int *y)
+void swap_int(int *array, size_t size, int *x, int *y)
 {
 	int temp;
 
@@ -35,18 +35,18 @@ void swap(int *array, size_t size, int *x, int *y)
 
 size_t split(int *array, size_t size, size_t start, size_t end)
 {
-	int j, i;
+	size_t j, i;
 	int pivot = array[end];
 
 	for (i = j = start; j < end; j++)
 	{
 		if (array[j] < pivot)
 		{
-			swap(array, size, &array[j], &array[i++]);
+			swap_int(array, size, &array[j], &array[i++]);
 		}
 	}
 
-	swap(array, size, &array[i], &array[end]);
+	swap_int(array, size, &array[i], &array[end]);
 	return (i);
 }
 /**
