@@ -28,6 +28,6 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void sort_recursion(int *array, size_t size, ssize_t start, ssize_t end);
 size_t split(int *array, size_t size, size_t start, size_t end);
-void swap(int *array, size_t size, int *x, int *y);
+void swap_int(int *array, size_t size, int *x, int *y);
 
 #endif
