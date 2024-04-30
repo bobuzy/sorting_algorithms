@@ -80,6 +80,28 @@ Here's how the code works:
 5. If `min_flag` is 1, it swaps the current element at index `ind1` with the minimum element found (`array[min]`) and prints the array.
 6. The outer loop continues until all elements are sorted.
 
+## Task 3: Quick Sort
+
+### Objective:
+Write a function that sorts an array of integers in ascending order using the Quick sort algorithm. You must implement the Lomuto partition scheme, and the pivot should always be the last element of the partition being sorted. The function should print the array after each time you swap two elements.
+
+### File Details:
+- Task File: `3-quick_sort.c`
+- Big O Notations (Time Complexity) in `3-O`:
+  - Best Case: O(n log n)
+  - Average Case: O(n log n)
+  - Worst Case: O(n^2)
+
+### Solution Code (`3-quick_sort.c`):
+The `quick_sort` function takes an array of integers (`int *array`) and its size (`size_t size`) as input parameters. It sorts the array in ascending order using the Quick sort algorithm with the Lomuto partition scheme.
+
+Here's how the code works:
+1. It defines helper functions `swap_int`, `split`, and `sort_recursion`.
+2. `swap_int` swaps two integer values in the array and prints the array after each swap.
+3. `split` divides the array into two parts using the pivot element (the last element of the partition being sorted) and returns the pivot index.
+4. `sort_recursion` sorts the array recursively using the Quick sort algorithm.
+5. The `quick_sort` function checks if the input array is valid and not empty, then calls `sort_recursion` to sort the array.
+
 ## How to Run the Code:
 - Compile the C file using a C compiler (e.g., gcc).
 - Execute the compiled program, providing inputs as required.
